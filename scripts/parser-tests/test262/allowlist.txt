@@ -1,0 +1,9 @@
+# 2 invalid programs did not produce a parsing error
+
+language/import/import-assertions/json-invalid.js(default)
+language/import/import-assertions/json-invalid.js(strict mode)
+
+
+# 0 valid programs produced a parsing error
+
+
