@@ -1687,16 +1687,6 @@ export function isJSXClosingFragment(
 
   return opts == null || shallowEqual(node, opts);
 }
-export function isNoop(
-  node: t.Node | null | undefined,
-  opts?: Opts<t.Noop> | null,
-): node is t.Noop {
-  if (!node) return false;
-
-  if (node.type !== "Noop") return false;
-
-  return opts == null || shallowEqual(node, opts);
-}
 export function isPlaceholder(
   node: t.Node | null | undefined,
   opts?: Opts<t.Placeholder> | null,
@@ -2650,7 +2640,6 @@ export function isExpression(
     case "ArrowFunctionExpression":
     case "ClassExpression":
     case "MetaProperty":
-    case "Super":
     case "TaggedTemplateExpression":
     case "TemplateLiteral":
     case "YieldExpression":
@@ -3725,7 +3714,6 @@ export function isMiscellaneous(
   if (!node) return false;
 
   switch (node.type) {
-    case "Noop":
     case "Placeholder":
     case "V8IntrinsicIdentifier":
       break;
